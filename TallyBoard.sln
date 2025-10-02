@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TallyBoard.App", "TallyBoard.App\TallyBoard.App.csproj", "{F995E610-BD08-4BD4-AAF9-7AB78E065CB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +12,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F995E610-BD08-4BD4-AAF9-7AB78E065CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F995E610-BD08-4BD4-AAF9-7AB78E065CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F995E610-BD08-4BD4-AAF9-7AB78E065CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F995E610-BD08-4BD4-AAF9-7AB78E065CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
