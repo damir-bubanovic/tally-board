@@ -1,0 +1,8 @@
+# TallyBoard.desktop
+[Desktop Entry]
+Type=Application
+Name=TallyBoard
+Exec=/home/devilmaycry/Software/TallyBoard/TallyBoard.App/bin/Release/net8.0/linux-x64/publish/TallyBoard.App
+Icon=/home/devilmaycry/Software/TallyBoard/TallyBoard.App/bin/Release/net8.0/linux-x64/publish/Assets/Icons/tallyboard-256.png
+Terminal=false
+Categories=Utility;
