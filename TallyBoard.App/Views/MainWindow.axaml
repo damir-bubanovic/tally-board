@@ -9,11 +9,21 @@
     Width="480" Height="360"
     MinWidth="420" MinHeight="300"
     Title="TallyBoard"
+    Icon="/Assets/Icons/tallyboard-256.png"
     mc:Ignorable="d">
 
   <Design.DataContext>
     <vm:MainWindowViewModel/>
   </Design.DataContext>
+
+  <!-- easy-to-tweak colors -->
+  <Window.Resources>
+    <Color x:Key="CountBgColor">#10B981</Color> <!-- green - #10B981 -->
+    <SolidColorBrush x:Key="CountBgBrush" Color="{StaticResource CountBgColor}"/>
+
+    <Color x:Key="CountLabelColor">#4F46E5</Color> <!-- blue - #4F46E5 -->
+    <SolidColorBrush x:Key="CountLabelBrush" Color="{StaticResource CountLabelColor}"/>
+  </Window.Resources>
 
   <!-- Keyboard shortcuts -->
   <Window.KeyBindings>
@@ -24,7 +34,6 @@
     <KeyBinding Gesture="Ctrl+0" Command="{Binding ResetCommand}"/>
     <KeyBinding Gesture="Alt+F4" Command="{Binding CloseWindowCommand}"/>
   </Window.KeyBindings>
-
 
   <DockPanel Margin="12" LastChildFill="True">
     <!-- Menu -->
@@ -39,10 +48,22 @@
 
     <!-- Main content -->
     <StackPanel Spacing="12" VerticalAlignment="Center" HorizontalAlignment="Center">
-      <TextBlock Text="Count" FontSize="18" HorizontalAlignment="Center"/>
-      <TextBlock Text="{Binding Count}" FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"/>
+      <TextBlock Text="Count" FontSize="20" FontWeight="Black" HorizontalAlignment="Center"
+                 Foreground="{StaticResource CountLabelBrush}"/>
 
-      <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center">
+      <!-- Count box -->
+      <Border Background="{StaticResource CountBgBrush}"
+              CornerRadius="8"
+              Padding="12,6"
+              HorizontalAlignment="Center">
+        <TextBlock Text="{Binding Count}"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   Foreground="White"
+                   HorizontalAlignment="Center"/>
+      </Border>
+
+      <StackPanel Orientation="Horizontal" Spacing="8" HorizontalAlignment="Center" Margin="0,8,0,0">
         <Button Content="-1" Width="72" Command="{Binding DecrementCommand}" />
         <Button Content="+1" Width="72" Command="{Binding IncrementCommand}" />
         <Button Content="Reset" Width="96" Command="{Binding ResetCommand}" />
